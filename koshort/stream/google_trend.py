@@ -113,8 +113,7 @@ class GoogleTrendStreamer(BaseStreamer):
 
         trenddata = json.loads(preprocess(content))
         trendlist, date = self._get_trendlist_of_date(trenddata)
-        trendlist = [
-                      { 'title' : trend['title']['query'],
+        trendlist = [ { 'title' : trend['title']['query'],
                         'traffic' : trend['formattedTraffic'],
                         # 'article_list' : trend['articles'],
                         'date' : date
